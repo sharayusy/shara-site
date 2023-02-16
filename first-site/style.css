@@ -1,0 +1,37 @@
+body {
+    color:cornflowerblue;
+    background-color:azure;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+p {
+    background-color:rgba(190, 150, 210, 0.502);
+    border: 1px solid;
+    padding: 20px;
+    text-align: center;
+    /* height: 200px; */
+}
+
+p:hover {
+    background-color:beige;
+}
+
+a {
+    color:darksalmon;
+    text-decoration:none;
+}
+
+a:hover {
+    color:lightsalmon;
+    text-decoration: line-through;
+}
+
+.special {
+    font-size: 25px;
+    color:darkolivegreen;
+}
+
+.ordinary {
+    background-color:cadetblue;
+}
