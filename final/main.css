@@ -1,0 +1,55 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+    position: relative;
+}
+
+.slideshow-container {
+	max-width: 100%;
+	position: relative;
+	margin: auto;
+    background-color: rgb(238, 233, 227);
+}  
+
+.mySlides {
+	display: none;
+    width: 100%;
+    height: auto;
+}
+
+.fade {
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@keyframes fade {
+	from {opacity: 0} 
+	to {opacity: 1}
+}
+
+#audioButton {
+    width: 38px;
+    height: 26px;
+    border: none;
+    border-radius: 10%;
+    background-size: contain;
+    background-color: rgb(190, 213, 186);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  #audioButton.play {
+    background-image: url('play.png');
+  }
+  
+  #audioButton.pause {
+    background-image: url('pause.png');
+  }
+  

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>willow's weekly calendar</title>
+	<link rel="stylesheet" href="main.css">
+	<style>
+		* {
+			box-sizing: border-box;
+			font-family: Helvetica, Arial, sans-serif;
+		}
+
+		body {
+			margin: 0;
+		}
+
+		.calendar {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 100%;
+			margin: 2%;
+			background-color: #f2f2f2;
+			border: 1px solid #ccc;
+		}
+
+		.day {
+			flex-basis: calc(14.28% - 4px);
+			height: 0;
+			padding-bottom: 14.28%;
+			position: relative;
+			margin: 2px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		.day:hover {
+			background-color: #ddd;
+		}
+
+		.day:before {
+			content: attr(data-day);
+			position: absolute;
+			top: 10%;
+			left: 0;
+			width: 100%;
+			font-size: 14px;
+			text-align: center;
+			color: #999;
+		}
+
+		@media screen and (max-width: 480px) {
+			.day {
+				flex-basis: calc(33.33% - 4px);
+				padding-bottom: 33.33%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="calendar">
+		<div class="day" data-day="monday" onclick="showImage('monday')"></div>
+		<div class="day" data-day="tuesday" onclick="showImage('tuesday')"></div>
+		<div class="day" data-day="wednesday" onclick="showImage('wednesday')"></div>
+		<div class="day" data-day="thursday" onclick="showImage('thursday')"></div>
+		<div class="day" data-day="friday" onclick="showImage('friday')"></div>
+		<div class="day" data-day="saturday" onclick="showImage('saturday')"></div>
+		<div class="day" data-day="sunday" onclick="showImage('sunday')"></div>
+	</div>
+
+	<div id="pop-up-container" onclick="hideImage()"></div>
+
+	<script>
+		function showImage(day) {
+			var container = document.getElementById("pop-up-container");
+			container.innerHTML = '<img src="' + day + '.jpg" alt="Image for ' + day + '">';
+			container.style.display = "flex";
+		}
+
+		function hideImage() {
+			var container = document.getElementById("pop-up-container");
+			container.style.display = "none";
+		}
+		function showImage(day) {
+    var container = document.getElementById("pop-up-container");
+    container.innerHTML = '<img id="pop-up-image" src="' + day + '.jpg" alt="Image for ' + day + '">';
+    container.style.display = "flex";
+    var image = document.getElementById("pop-up-image");
+    image.style.width = "400px";
+    image.style.height = "500px";
+}
+
+	</script>
+</body>
+</html>

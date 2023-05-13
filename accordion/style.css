@@ -1,0 +1,138 @@
+* {
+  box-sizing:border-box;
+}
+
+body {
+  background:rgb(222, 230, 230);
+  transition:background 2s;
+}
+
+.table {
+  position: fixed;
+  bottom:0;
+  left:0;
+  width:100vw;
+  height:20vh;
+  background:rgb(156, 128, 109);
+  transition:background 2s;
+}
+
+.drink {
+  position: fixed;
+  bottom:20vh;
+  left:45%;
+  width:35vw;
+  height:35vh;
+  background:rgb(41, 152, 216);
+  opacity: 70;
+  transition: opacity 2s, background 2s, bottom 2s, transform 2s;
+  z-index: 5;
+  transform-origin: bottom center;
+}
+
+.cup {
+  position: fixed;
+  bottom:20vh;
+  left:45%;
+  width:35vw;
+  height:40vh;
+  background:rgb(110, 139, 156);
+  opacity: 75%;
+  transition:background 2s, transform 2s;
+  transform-origin: bottom center;
+}
+
+.straw {
+  position: fixed;
+  bottom:50vh;
+  left:100%;
+  width:3vw;
+  height:25vh;
+  transform: rotate(-25deg);
+  background:rgb(251, 255, 124);
+  transition:background 2s, opacity .5s;
+}
+
+.straw {
+  transform: rotate(25deg);
+  left:65%;
+}
+
+@media screen and (max-width: 1200px) {
+  /* COFFEE */
+
+  body {
+    background: rgb(246, 224, 215);
+  }
+
+  .drink {
+    background:rgb(85, 65, 40);
+  }
+
+  .cup {
+    background:rgb(132, 201, 247);
+  }
+
+  .straw {
+    background:rgb(238, 172, 189);
+  }
+
+  .table {
+    background:rgb(84, 76, 96);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /* WATER */
+
+  body {
+    background: rgb(244, 242, 217);
+  }
+
+  .drink {
+    opacity: 100;
+    background:rgb(213, 230, 241);
+  }
+
+  .straw {
+    opacity:100;
+  }
+
+  .cup {
+    background: rgb(198, 206, 235);
+  }
+  
+  .straw {
+    background:rgb(232, 94, 128);
+  }
+
+  .table {
+    background:rgb(141, 144, 136);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* JUICE */
+
+  body {
+    background: rgb(198, 206, 235);
+  }
+
+  .drink {
+    background:rgb(43, 66, 192);
+    transform: scale(40%, 40%);
+  }
+
+  .cup {
+    background:rgb(245, 213, 239);
+    transform: scale(40%, 40%);
+  }
+
+  .straw {
+    background:rgb(236, 28, 80);
+  }
+
+  .table {
+    background:rgb(141, 117, 117);
+  }
+}

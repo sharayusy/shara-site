@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blanchedalmond;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+.content-box {
+    background-color: rgb(228, 208, 181);
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    border: 20px solid lightblue;
+    margin: 50px;
+}
+
+.border-box {
+    background-color: bisque;
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    border: 20px solid darkblue;
+    margin: 50px;
+    box-sizing: border-box;
+}
+
+.circle {
+    background-color: rgb(101, 70, 70);
+    color: tomato;
+    width: 300px;
+    height: 300px;
+    padding: 50px;
+    border-radius: 100% 100% 0 0;
+
+}
