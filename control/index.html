@@ -70,16 +70,6 @@
 
 	<script>
 		function showImage(day) {
-			var container = document.getElementById("pop-up-container");
-			container.innerHTML = '<img src="' + day + '.jpg" alt="Image for ' + day + '">';
-			container.style.display = "flex";
-		}
-
-		function hideImage() {
-			var container = document.getElementById("pop-up-container");
-			container.style.display = "none";
-		}
-		function showImage(day) {
     var container = document.getElementById("pop-up-container");
     container.innerHTML = '<img id="pop-up-image" src="' + day + '.jpg" alt="Image for ' + day + '">';
     container.style.display = "flex";
